@@ -1,0 +1,121 @@
+
+/*grid-container*/
+
+.grid-contain {
+    display: grid;
+    grid-template-columns: 100vw;
+    grid-template-rows: 5rem auto auto;
+
+}
+
+/*navigation*/
+
+.flex-nav {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+
+}
+
+.flex-nav a {
+    margin: 4px;
+    padding: 3px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: medium;
+    border: solid;
+    border-color: rgb(255, 250, 232);
+}
+
+/*flexbox gallery*/
+
+.flexboxgallery {
+    display: flex;
+    flex-flow: row wrap;
+    justify-items: center;
+}
+
+/*footer*/
+
+#footer {
+    position: fixed;
+    text-align: end;
+    padding: 7px 2px 5.7px 5px;
+    bottom: 0;
+    width: 90%;
+    height: 50px;
+    background: none;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: oblique;
+    font-weight: 555;
+}
+
+
+/*Mobile Layout*/
+
+@media screen and (min-width: 300px) and (max-width: 500px) { 
+    .grid-contain {
+        grid-template-columns: auto;
+        grid-template-rows: 4rem auto auto;
+    } 
+    .flex-nav {
+        grid-row: 2/3;
+        grid-column: 1/2;
+    }
+
+    .flex-nav a {
+        margin: 4px;
+        padding: 3px;
+        font-size: small;
+    }
+
+    .flexboxgallery {
+        grid-row: 3/4;
+        grid-column: 1/2;
+    }
+}
+
+/*Tablet Layout*/
+
+@media screen and (min-width: 500px) and (max-width: 850px) {
+    .grid-contain{
+        grid-template-columns: auto;
+        grid-template-rows: 5rem auto auto;
+    }
+
+    .flex-nav{
+        grid-row: 2/3;
+        grid-column: 1/2;
+    }
+
+    .flex-nav a{
+        font-size: medium;
+    }
+
+    .flexboxgallery {
+        grid-row: 3/4;
+        grid-column: 1/2;
+    }
+}
+
+
+/*Desktop Layout*/
+
+@media  screen and (min-width: 850px) and (max-width: 1920px) {
+    .grid-contain{
+        grid-template-columns: auto;
+        grid-template-rows: 5rem auto auto;
+    }
+    .flex-nav{
+        grid-row: 2/3;
+        grid-column: 1/2;
+    }
+
+    .flex-nav a{
+        font-size: large;
+    }
+
+    .flexboxgallery {
+        grid-row: 3/4;
+        grid-column: 1/2;
+    }
+}
